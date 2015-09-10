@@ -148,16 +148,16 @@ public class TicTacToe {
 		while (t.getCheck() == WinCheck.NOTOVER){
 			t.printBoard();
 			if (t.xTurn == true){
-				System.out.println("Player 1, enter the row: ");
+				System.out.println("Player 1, enter a row from 0 to 2: ");
 				row = userInput.nextInt();
-				System.out.println("Player 1, enter the column: ");
+				System.out.println("Player 1, enter a row from 0 to 2: ");
 				col = userInput.nextInt();
 				t.setMark(row, col);
 			}
 			else{
-				System.out.println("Player 2, enter the row: ");
+				System.out.println("Player 2, enter a row from 0 to 2: ");
 				row = userInput.nextInt();
-				System.out.println("Player 2, enter the column: ");
+				System.out.println("Player 2, enter a row from 0 to 2: ");
 				col = userInput.nextInt();
 				t.setMark(row, col);
 			}
