@@ -1,6 +1,7 @@
 package edu.jsu.mcis;
 
 import java.util.Scanner;
+import javax.swing.JFrame;
 
 public class TicTacToe {
 	
@@ -121,6 +122,10 @@ public class TicTacToe {
 		return check;
 	}
 	
+	public boolean getTurn(){
+		return xTurn;
+	}
+	
 	private void printBoard(){
 		for (int i = 0; i < board.length; i++){
 			for (int j = 0; j < board.length; j++){
@@ -139,6 +144,7 @@ public class TicTacToe {
 	}
 
 	public static void main(String[] args) {
+		/*
 		TicTacToe t;
 		t = new TicTacToe();
 		Scanner userInput = new Scanner(System.in);
@@ -172,5 +178,13 @@ public class TicTacToe {
 		else{
 			System.out.println("It's a draw!");
 		}
+		*/
+		
+		JFrame frame = new JFrame("Tic Tac Toe");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		TicTacToePanel panel = new TicTacToePanel();
+		frame.add(panel);
+		frame.pack();
+		frame.setVisible(true);
 	}
 }
