@@ -1,5 +1,6 @@
 package edu.jsu.mcis;
 
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -10,23 +11,31 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Font;
 
-public class TicTacToePanel extends JPanel{
+public class TicTacToeFrame extends JFrame{
+	
 	private JButton[][] move;
 	private TicTacToe t;
+	private JFrame frame = new JFrame("Tic Tac Toe");
+	private JPanel panel = new JPanel();
 	
-	public TicTacToePanel(){
+	
+	public TicTacToeFrame(){
 		t = new TicTacToe();
-		setLayout (new GridLayout(3, 3, 3, 3));
-		setPreferredSize(new Dimension(400,400));
+		panel.setLayout (new GridLayout(3, 3, 3, 3));
+		panel.setPreferredSize(new Dimension(400,400));
 		move = new JButton[3][3];
 		for (int i = 0; i < 3; i++){
 			for (int j = 0; j < 3; j++){
 				move[i][j] = new JButton();
 				move[i][j].setName("Location" + i + j);
 				move[i][j].addActionListener(new ButtonListener());
-				add(move[i][j]);
+				panel.add(move[i][j]);
 			}
 		}
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		frame.pack();
+		frame.setVisible(true);
 		
 	}
 	

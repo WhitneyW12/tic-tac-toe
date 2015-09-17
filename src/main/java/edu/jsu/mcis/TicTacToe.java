@@ -1,7 +1,6 @@
 package edu.jsu.mcis;
 
 import java.util.Scanner;
-import javax.swing.JFrame;
 
 public class TicTacToe {
 	
@@ -180,11 +179,7 @@ public class TicTacToe {
 		}
 		*/
 		
-		JFrame frame = new JFrame("Tic Tac Toe");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		TicTacToePanel panel = new TicTacToePanel();
-		frame.add(panel);
-		frame.pack();
-		frame.setVisible(true);
+		TicTacToeFrame frame = new TicTacToeFrame();
+		
 	}
 }
