@@ -143,43 +143,6 @@ public class TicTacToe {
 	}
 
 	public static void main(String[] args) {
-		/*
-		TicTacToe t;
-		t = new TicTacToe();
-		Scanner userInput = new Scanner(System.in);
-		int row = 0;
-		int col = 0;
-		
-		while (t.getCheck() == WinCheck.NOTOVER){
-			t.printBoard();
-			if (t.xTurn == true){
-				System.out.println("Player 1, enter a row from 0 to 2: ");
-				row = userInput.nextInt();
-				System.out.println("Player 1, enter a row from 0 to 2: ");
-				col = userInput.nextInt();
-				t.setMark(row, col);
-			}
-			else{
-				System.out.println("Player 2, enter a row from 0 to 2: ");
-				row = userInput.nextInt();
-				System.out.println("Player 2, enter a row from 0 to 2: ");
-				col = userInput.nextInt();
-				t.setMark(row, col);
-			}
-		}
-		t.printBoard();
-		if (t.check == WinCheck.XWIN){
-			System.out.println("Player 1 wins!");
-		}
-		else if (t.check == WinCheck.OWIN){
-			System.out.println("Player 2 wins!");
-		}
-		else{
-			System.out.println("It's a draw!");
-		}
-		*/
-		
 		TicTacToeFrame frame = new TicTacToeFrame();
-		
 	}
 }
